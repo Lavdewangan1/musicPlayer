@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    padding-top: 10rem;
+}
+
+button {
+    margin: 2px;
+}
+
+.player-container {
+    /* Center the player */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.song-info {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Style the audio controls */
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* Style the buttons */
+.controls button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Style the progress bar */
+.controls input[type="range"] {
+    width: 50%;
+    margin: 0 10px;
+    appearance: none;
+    background: #ddd;
+    outline: none;
+    height: 6px;
+    border-radius: 5px;
+}
+
+#audio-player {
+    width: 100%;
+}
+
+.controls input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: #007bff;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+/* Style the progress time and duration time */
+.controls span {
+    font-size: 14px;
+    margin: 0 10px;
+}
+
+/* Add styles for the song list section */
+.song-list {
+    width: 30rem;
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.song-list h2 {
+    margin-top: 0;
+}
+
+#song-list-ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#song-list-ul li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+#song-list-ul li:hover {
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
+
+#song-list-ul li:last-child {
+    border-bottom: none;
+}
+
+/* Add styles for the playlist manager section */
+.playlist-manager {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.playlist-manager h2 {
+    margin-top: 0;
+}
+
+#playlist-list-ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#playlist-list-ul li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+#playlist-list-ul li:hover {
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
+
+#playlist-list-ul li:last-child {
+    border-bottom: none;
+}
+
+#new-playlist-input {
+    width: 50%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+#create-playlist-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#create-playlist-button:hover {
+    background-color: #0069d9;
+}
+
+
+@media (width < 600px) {
+
+    .player-container,
+    .song-list {
+        width: 100%;
+    }
+}
